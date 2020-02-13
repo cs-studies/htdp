@@ -4,7 +4,8 @@
 (require 2htdp/image)
 
 ; Definitions
-
+(define sunny #true)
+(define friday #false)
 
 ; Application
-
+(or (not sunny) friday)
