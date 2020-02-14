@@ -57,7 +57,7 @@
 1 0 10 #"text-box%\0"
 1 0 32 #"(lib \"text-snipclass.ss\" \"xml\")\0"
 1 0 1 6 #"wxloc\0"
-          0 0 64 0 1 #"\0"
+          0 0 69 0 1 #"\0"
 0 75 1 #"\0"
 0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 0 9
 #"Standard\0"
@@ -246,7 +246,22 @@
 -1 -1 2 1 #"\0"
 0 -1 1 #"\0"
 0 13 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
--1 -1           0 38 0 4 3 85
+-1 -1 0 1 #"\0"
+0 75 6 #"Menlo\0"
+0.0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
+255 255 1 -1 2 1 #"\0"
+0 -1 1 #"\0"
+1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 0 0 0 0 0
+-1 -1 2 1 #"\0"
+0 -1 1 #"\0"
+1.0 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 150 0 150 0
+0 0 -1 -1 2 1 #"\0"
+0 -1 1 #"\0"
+1.0 0 -1 -1 93 -1 -1 -1 0 1 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 255 0 0 0 0
+0 -1 -1 2 1 #"\0"
+0 -1 1 #"\0"
+1.0 0 -1 -1 -1 93 -1 -1 0 1 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 0 175 0 0
+0 -1 -1           0 50 0 4 3 85
 (4
  #";; The first three lines of this file were inserted by DrRacket. The"
  #"y record metadata"
@@ -256,12 +271,26 @@
  #";; about the language level of this file in a form that our tools ca"
  #"n easily process."
 ) 0 0 4 29 1 #"\n"
-0 0 4 3 173
+0 0 4 3 180
 (6
- #"#reader(lib \"htdp-beginner-reader.ss\" \"lang\")((modname Ex6) (rea"
- #"d-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor"
- #" repeating-decimal #f #t none #f () #f)))"
+ #"#reader(lib \"htdp-beginner-reader.ss\" \"lang\")((modname Exercise-"
+ #"6) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t cons"
+ #"tructor repeating-decimal #f #t none #f () #f)))"
 ) 0 0 4 29 1 #"\n"
+0 0 17 3 1 #"#"
+0 0 17 3 1 #"|"
+0 0 17 29 1 #"\n"
+0 0 17 3 59
+#"Exercise 6. Add the following line to the definitions area:"
+0 0 17 29 1 #"\n"
+0 0 17 3 20 #"(define cat <image>)"
+0 0 17 29 1 #"\n"
+0 0 17 3 67
+#"Create an expression that counts the number of pixels in the image."
+0 0 17 29 1 #"\n"
+0 0 17 3 2 #"|#"
+0 0 24 29 1 #"\n"
+0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 15 3 7 #"require"
 0 0 24 3 1 #" "

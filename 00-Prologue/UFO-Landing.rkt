@@ -1,7 +1,9 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname UFO-Landing) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
-; Based on https://htdp.org/2019-02-24/part_prologue.html
+#|
+Based on https://htdp.org/2019-02-24/part_prologue.html
+|#
 
 (require 2htdp/image)
 (require 2htdp/universe)
@@ -22,7 +24,7 @@
                SCENE-CENTER-X
                ROCK-CENTER-Y
                (empty-scene SCENE-WIDTH SCENE-HEIGHT "blue")))
- 
+
 ; UFO definitions
 (define UFO-IMAGE (overlay
                    (circle 1 "solid" "red")
