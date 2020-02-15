@@ -15,10 +15,5 @@ To confirm that the expression works properly, change x to 12 and y to 5.
 (define x 3)
 (define y 4)
 
-; Functions
-(define (calculate-distance x y) (sqrt (+ (* x x) (* y y))))
-
 ; Application
-(calculate-distance x y)
-
-(calculate-distance 12 5)
+(sqrt (+ (sqr x) (sqr y)))
