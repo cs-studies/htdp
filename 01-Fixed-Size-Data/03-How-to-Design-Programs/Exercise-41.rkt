@@ -19,7 +19,7 @@
 (check-expect (key-handler 20 "s") X-CAR-STOP)
 (check-expect (key-handler 20 "r") X-CAR-START)
 
-(check-expect (end? X-CAR-STOP) #true)
+(check-expect (end? (+ X-CAR-STOP 1)) #true)
 (check-expect (end? 30) #false)
 
 
@@ -39,6 +39,7 @@
                    (underlay/offset CAR-BODY
                                     0 WHEEL-RADIUS
                                     TWO-WHEELS)))
+(define CAR-WIDTH (image-width CAR))
 
 (define TREE
   (underlay/offset (circle WHEEL-DIAMETER "solid" "green")
@@ -54,8 +55,8 @@
                (empty-scene BACKGROUND-WIDTH BACKGROUND-HEIGHT)))
 
 (define Y-CAR (- BACKGROUND-HEIGHT (/ (image-height CAR) 2)))
-(define X-CAR-START (image-width CAR))
-(define X-CAR-STOP (- BACKGROUND-WIDTH (image-width CAR)))
+(define X-CAR-START (- 0 (/ CAR-WIDTH 2)))
+(define X-CAR-STOP (+ BACKGROUND-WIDTH (/ CAR-WIDTH 2)))
 
 
 ;; A WorldState is a Number.
@@ -85,7 +86,7 @@
 ;; WorldState -> Number
 ;; Calculates when to stop the car.
 (define (end? ws)
-  (>= ws X-CAR-STOP))
+  (> ws X-CAR-STOP))
 
 (define (main ws)
   (big-bang ws

@@ -16,7 +16,7 @@
 (check-expect (tick-handler 20) (+ VELOCITY 20))
 (check-expect (tick-handler 78) (+ VELOCITY 78))
 
-(check-expect (end? X-CAR-STOP) #true)
+(check-expect (end? (+ X-CAR-STOP 1)) #true)
 (check-expect (end? 30) #false)
 
 
@@ -52,7 +52,7 @@
                (empty-scene BACKGROUND-WIDTH BACKGROUND-HEIGHT)))
 
 (define Y-CAR (- BACKGROUND-HEIGHT (/ (image-height CAR) 2)))
-(define X-CAR-STOP (+ BACKGROUND-WIDTH CAR-WIDTH 1))
+(define X-CAR-STOP (+ BACKGROUND-WIDTH CAR-WIDTH))
 
 ;; Number -> Number
 ;; Converts car x-coordinate
@@ -77,7 +77,7 @@
 ;; WorldState -> Number
 ;; Calculates when to stop the car.
 (define (end? ws)
-  (>= ws X-CAR-STOP))
+  (> ws X-CAR-STOP))
 
 (define (main ws)
   (big-bang ws
