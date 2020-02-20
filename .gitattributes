@@ -1,0 +1,16 @@
+# Automatically detect text files to have their line endings normalized.
+# (Convert crlf to lf.)
+* text=auto
+
+# These files are text and should be normalized.
+*.rkt  text
+*.txt  text
+*.md   text
+
+# These files are binary and should not be normalized.
+*.png
+
+# These files won’t be added to the repository archive.
+.gitattributes export-ignore
+.gitignore export-ignore
+
