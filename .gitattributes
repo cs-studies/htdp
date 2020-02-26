@@ -8,7 +8,7 @@
 *.md   text
 
 # These files are binary and should not be normalized.
-*.png
+*.png binary
 
 # These files won’t be added to the repository archive.
 .gitattributes export-ignore
