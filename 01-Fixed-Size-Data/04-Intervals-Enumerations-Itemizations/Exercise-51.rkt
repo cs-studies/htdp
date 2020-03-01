@@ -41,20 +41,26 @@
     [on-tick next-lens duration]))
 
 ;; State -> Image
+(check-expect (render "red")
+              (above (circle LENS-RADIUS "solid" "red")
+                     (circle LENS-RADIUS "outline" "yellow")
+                     (circle LENS-RADIUS "outline" "green")))
 (define (render state)
-  (above (draw-lens state "red")
-         (draw-lens state "yellow")
-         (draw-lens state "green")))
+  (above (draw-lens "red" state)
+         (draw-lens "yellow" state)
+         (draw-lens "green" state)))
 
 ;; State State -> Image
-(define (draw-lens state lens)
+(check-expect (draw-lens "green" "green") (circle LENS-RADIUS "solid" "green"))
+(check-expect (draw-lens "green" "yellow") (circle LENS-RADIUS "outline" "green"))
+(define (draw-lens lens state)
   (circle LENS-RADIUS (mode lens state) lens))
   
 ;; State State -> LensMode
 (check-expect (mode "green" "red") "outline")
 (check-expect (mode "red" "red") "solid")
 (define (mode lens state)
-  (if (string=? state lens) "solid" "outline"))
+  (if (string=? lens state) "solid" "outline"))
 
 ;; State -> State
 (check-expect (next-lens "red") "green")
@@ -71,4 +77,3 @@
 
 ;; Application
 ;(traffic-light "red" 2)
-
