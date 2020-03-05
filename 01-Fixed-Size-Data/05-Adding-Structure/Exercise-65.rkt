@@ -13,15 +13,14 @@
 
 ;; Constructor
 ; make-movie
-(define m (make-movie "Some Title" "THE Producer" "2020"))
 
 ;; Selectors
-(movie-title m)
-(movie-producer m)
-(movie-year m)
+; movie-title
+; movie-producer
+; movie-year
 
 ;; Predicate
-(movie? m)
+; movie?
 
 
 ;; Definition 2.
@@ -29,17 +28,15 @@
 
 ;; Constructor
 ; make-person
-(define p1 (make-person "Alan Turing" "Brown" "Blue" "21910532"))
 
 ;; Selectors
-(person-name p1)
-(person-hair p1)
-(person-eyes p1)
-(person-phone p1)
+; person-name
+; person-hair
+; person-eyes
+; person-phone
 
 ;; Predicate
-(person? p1)
-(person? m)
+; person?
 
 
 ;; Definition 3.
@@ -47,15 +44,13 @@
 
 ;; Constructor
 ; make-pet
-(define p2 (make-pet "BumbleBee" 33))
 
 ;; Selectors
-(pet-name p2)
-(pet-number p2)
+; pet-name
+; pet-number
 
 ;; Predicate
-(pet? p2)
-(person? p2)
+; pet?
 
 
 ;; Definition 4.
@@ -63,16 +58,14 @@
 
 ;; Constructor
 ; make-CD
-(define c (make-CD "Maya P." "Dancing" 33.5))
 
 ;; Selectors
-(CD-artist c)
-(CD-title c)
-(CD-price c)
+; CD-artist
+; CD-title
+; CD-price
 
 ;; Predicate
-(CD? c)
-(CD? m)
+; CD?
 
 
 ;; Definition 5.
@@ -80,13 +73,11 @@
 
 ;; Constructor
 ; make-sweater
-(define s (make-sweater "Wool" "M" "ZaphodB"))
 
 ;; Selectors
-(sweater-material s)
-(sweater-size s)
-(sweater-producer s)
+; sweater-material
+; sweater-size
+; sweater-producer
 
 ;; Predicate
-(sweater? s)
-(sweater? c)
+; sweater?
