@@ -12,3 +12,4 @@
   (or (not x) y))
 
 (==> #true #false)
+

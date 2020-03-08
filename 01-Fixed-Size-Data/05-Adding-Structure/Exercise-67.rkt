@@ -29,3 +29,4 @@
 ;; Instance 3.
 (check-expect (balld? new-balld3) #true)
 (define new-balld3 (make-balld 100 "up"))
+

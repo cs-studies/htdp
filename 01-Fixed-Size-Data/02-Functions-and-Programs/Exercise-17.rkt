@@ -17,3 +17,4 @@
       (if (> (image-width img) (image-height img))
           "wide"
           "square")))
+

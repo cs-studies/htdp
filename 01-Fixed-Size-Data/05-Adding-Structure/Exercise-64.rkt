@@ -13,3 +13,4 @@
 (check-expect (manhattan-distance (make-posn 0 4)) 4)
 (define (manhattan-distance p)
   (+ (posn-x p) (posn-y p)))
+

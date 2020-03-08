@@ -44,3 +44,4 @@
 (string-remove-last "0-day")
 
 (string-remove-last "FYI")
+

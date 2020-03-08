@@ -18,3 +18,4 @@
 
 ;; Square is not classified as "square"
 (image-classify (square 20 "outline" "blue"))
+

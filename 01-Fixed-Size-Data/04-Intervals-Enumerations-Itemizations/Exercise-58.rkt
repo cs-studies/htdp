@@ -43,3 +43,4 @@
     [(and (<= 0 price) (< price LOWER-BOUND-1)) 0]
     [(and (<= LOWER-BOUND-1 price) (< price LOWER-BOUND-2)) (* RATE-1 price)]
     [(>= price LOWER-BOUND-2) (* RATE-2 price)]))
+

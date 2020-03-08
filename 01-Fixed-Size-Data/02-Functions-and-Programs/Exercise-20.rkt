@@ -16,3 +16,4 @@
 
 ;; Application
 (string-delete "Funny_Faces" 5)
+

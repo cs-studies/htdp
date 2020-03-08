@@ -14,3 +14,4 @@
 
 ;; Application
 (string-append (substring str 0 (- i 1)) (substring str i))
+

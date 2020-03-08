@@ -43,3 +43,4 @@
 
 ;; Use HEIGHT to position the rocket.
 (place-image ROCKET (/ WIDTH 2) HEIGHT SCENE)
+

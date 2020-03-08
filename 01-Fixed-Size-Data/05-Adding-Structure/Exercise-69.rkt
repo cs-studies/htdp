@@ -8,3 +8,4 @@
 (require 2htdp/image)
 
 (bitmap "./images/diagrams.png")
+

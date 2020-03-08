@@ -45,3 +45,4 @@
 (image-area (square 10 "solid" "red"))
 
 (image-area (rectangle 30 40 "outline" "blue"))
+

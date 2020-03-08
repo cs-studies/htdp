@@ -59,3 +59,4 @@
 ;; (game-left-player (make-game 100 100 (make-posn 200 200)))
 ;; ==
 ;; 100
+

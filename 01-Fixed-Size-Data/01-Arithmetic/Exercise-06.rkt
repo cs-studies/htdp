@@ -14,3 +14,4 @@
 
 ;; Application
 (* (image-width cat) (image-height cat))
+

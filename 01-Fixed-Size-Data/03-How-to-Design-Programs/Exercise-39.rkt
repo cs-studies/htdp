@@ -42,3 +42,4 @@
              (image-width CAR)
              (- BACKGROUND-HEIGHT (/ (image-height CAR) 2))
              BACKGROUND)
+

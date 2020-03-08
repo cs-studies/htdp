@@ -88,3 +88,4 @@
 ;; Predicate
 (sweater? s)
 (sweater? c)
+

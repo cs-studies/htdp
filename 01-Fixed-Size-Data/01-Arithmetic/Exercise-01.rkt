@@ -17,3 +17,4 @@
 
 ;; Application
 (sqrt (+ (sqr x) (sqr y)))
+

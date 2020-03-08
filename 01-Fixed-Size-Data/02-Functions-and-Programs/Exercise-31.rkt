@@ -54,3 +54,4 @@
 (main FST LST SIGNATURE OUT)
 
 (write-file 'stdout (string-append (read-file OUT) "\n"))
+

@@ -8,3 +8,4 @@
 
 ;; Definitions
 (define (calculate-distance x y) (sqrt (+ (sqr x) (sqr y))))
+

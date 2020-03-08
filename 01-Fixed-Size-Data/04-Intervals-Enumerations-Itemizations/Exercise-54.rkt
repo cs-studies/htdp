@@ -27,3 +27,4 @@
 ;; (define x "rest") ; #false
 (define x "resting") ; #true
 (and (string? x) (string=? "resting" x))
+

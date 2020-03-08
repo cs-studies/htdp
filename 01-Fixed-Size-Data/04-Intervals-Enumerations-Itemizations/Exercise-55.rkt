@@ -34,3 +34,4 @@
 
 (define (draw-rocket y)
   (place-image ROCKET 10 y SCENE))
+
