@@ -10,24 +10,19 @@
 
 
 ;; A Letter is one of:
-;; - 1String [a-z]
+;; - 1String "a" through "z",
+;; - #false.
 ;; Represents a lowercase letter of a Latin alphabet.
-
-;; A 3String is a String of length 3,
-;; that can be constructed from Letters.
-;; Represents a three-letter Latin alphabet string.
+;; #false denotes exceptional cases.
 
 (define-struct word [letter1 letter2 letter3])
 
-;; A Word is a stucture
-;; (make-word Letter Letter Letter)
-;; that produces one of:
-;; - 3String
-;; - #false.
+;; A Word is a stucture:
+;; (make-word Letter Letter Letter).
 ;; (make-word l1 l2 l3) represents
-;; an English language word that consists of:
-;; the first letter l1,
-;; the second letter l2, and
-;; the third [final] letter l3.
-;; Produces #false if a word cannot be constructed.
+;; an English language three-letter word
+;; that consists of:
+;; - the first Letter l1,
+;; - the second Letter l2, and
+;; - the third [final] Letter l3.
 
