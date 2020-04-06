@@ -39,13 +39,13 @@
 ;; has a color c, and
 ;; a happiness level s.
 
-(define CHAM1 (bitmap "./images/chameleon.png"))
-(define CHAM2 (bitmap "./images/chameleon.png"))
-(define CHAM3 (bitmap "./images/chameleon.png"))
+(define CHAM1 (bitmap "./images/cham-v3-1.png"))
+(define CHAM2 (bitmap "./images/cham-v3-2.png"))
+(define CHAM3 (bitmap "./images/cham-v3-1.png"))
 (define CHAM-WIDTH (image-width CHAM1))
 (define CHAM-HEIGHT (image-height CHAM1))
 (define CANVAS-WIDTH (* CHAM-WIDTH 6))
-(define CANVAS-HEIGHT (* CHAM-HEIGHT 1.5))
+(define CANVAS-HEIGHT (* CHAM-HEIGHT 3))
 (define CHAM-Y (- CANVAS-HEIGHT (/ CHAM-HEIGHT 2) 1))
 (define CHAM-VELOCITY 3)
 
