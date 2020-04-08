@@ -9,12 +9,14 @@
 
 ;;; Data Definitions
 
+(define-struct vel [deltax deltay])
 ;; A Vel is a structure:
 ;; (make-vel Number Number).
 ;; (make-vel dx dy) means a velocity of
 ;; dx pixels [per tick] along the horizontal and
 ;; dy pixels [per tick] along the vertical direction.
 
+(define-struct ufo [loc vel])
 ;; A UFO is a structure:
 ;; (make-ufo Posn Vel).
 ;; (make-ufo p v) is at location p,
@@ -22,9 +24,6 @@
 
 
 ;;; Constants
-
-(define-struct ufo [loc vel])
-(define-struct vel [deltax deltay])
 
 (define v1 (make-vel 8 -3))
 (define v2 (make-vel -5 -3))
