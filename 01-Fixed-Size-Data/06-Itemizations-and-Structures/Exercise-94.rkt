@@ -10,6 +10,7 @@
 (require 2htdp/image)
 
 ;;; Constants
+
 (define WIDTH 300)
 (define HEIGHT 200)
 (define SCENE (empty-scene WIDTH HEIGHT "deepskyblue"))
@@ -30,6 +31,7 @@
 
 
 ;;; Application
+
 (place-image UFO
              UFO-X-START UFO-Y-START
              (place-image TANK
