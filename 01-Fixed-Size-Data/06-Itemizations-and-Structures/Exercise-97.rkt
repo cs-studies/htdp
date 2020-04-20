@@ -15,14 +15,14 @@
 ;; A UFO is a Posn.
 ;; (make-posn x y) is the UFO's location,
 ;; using the top-down, left-to-right convention.
- 
+
 (define-struct tank [loc vel])
 ;; A Tank is a structure:
-;   (make-tank Number Number). 
-; (make-tank x dx) specifies the position:
-; (x, HEIGHT) and the tank's speed: dx pixels/tick. 
- 
-;; A Missile is a Posn. 
+;;   (make-tank Number Number).
+;; (make-tank x dx) specifies the x position
+;; and the tank speed: dx pixels/tick.
+
+;; A Missile is a Posn.
 ;; (make-posn x y) is the missile's position.
 
 (define-struct aim [ufo tank])
@@ -31,7 +31,7 @@
 ;; Represents states getting tank in position for a shot.
 
 (define-struct fired [ufo tank missile])
-;; A Fired is a sctructure:
+;; A Fired is a structure:
 ;;    (make-fired UFO Tank Missile)
 ;; Represents states after the missile is fired.
 
@@ -56,13 +56,13 @@
 (define MISSILE-IMAGE (triangle 5 "solid" "black"))
 
 
-;; Tank Image -> Image 
+;; Tank Image -> Image
 ;; Adds tank to the given image.
 (check-expect (tank-render (make-tank (make-posn 50 TANK-Y) 3) BACKGROUND)
               (place-image TANK-IMAGE 50 TANK-Y BACKGROUND))
 (define (tank-render tank img)
   (place-image TANK-IMAGE (posn-x (tank-loc tank)) TANK-Y img))
- 
+
 ;; UFO Image -> Image
 ;; Adds ufo to the given image.
 (check-expect (ufo-render (make-posn 50 50) (empty-scene 100 100 "pink"))
