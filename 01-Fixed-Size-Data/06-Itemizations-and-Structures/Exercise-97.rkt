@@ -56,6 +56,8 @@
 (define MISSILE-IMAGE (triangle 5 "solid" "black"))
 
 
+;;; Functions
+
 ;; Tank Image -> Image
 ;; Adds tank to the given image.
 (check-expect (tank-render (make-tank (make-posn 50 TANK-Y) 3) BACKGROUND)
