@@ -318,10 +318,10 @@
 
 ;; UFO Missile -> Boolean
 ;; Checks if a Missile hit the UFO.
-(check-expect (ufo-hit? (fired-missile TEST-HIT) (fired-ufo TEST-HIT)) #true)
-(check-expect (ufo-hit? (fired-missile TEST-LANDED) (fired-ufo TEST-LANDED)) #false)
-(define (ufo-hit? missile ufo)
-  (<= (distance missile ufo) HIT-DISTANCE))
+(check-expect (ufo-hit?  (fired-ufo TEST-HIT) (fired-missile TEST-HIT)) #true)
+(check-expect (ufo-hit? (fired-ufo TEST-LANDED) (fired-missile TEST-LANDED)) #false)
+(define (ufo-hit? ufo missile)
+  (<= (distance ufo missile) HIT-DISTANCE))
 
 ;; Posn Posn -> PositiveNumber
 ;; Calculates distance between two points.
