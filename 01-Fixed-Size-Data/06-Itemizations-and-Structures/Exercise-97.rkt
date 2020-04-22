@@ -60,10 +60,10 @@
 
 ;; Tank Image -> Image
 ;; Adds tank to the given image.
-(check-expect (tank-render (make-tank (make-posn 50 TANK-Y) 3) BACKGROUND)
+(check-expect (tank-render (make-tank 50 3) BACKGROUND)
               (place-image TANK-IMAGE 50 TANK-Y BACKGROUND))
 (define (tank-render tank img)
-  (place-image TANK-IMAGE (posn-x (tank-loc tank)) TANK-Y img))
+  (place-image TANK-IMAGE (tank-loc tank) TANK-Y img))
 
 ;; UFO Image -> Image
 ;; Adds ufo to the given image.
@@ -83,7 +83,7 @@
 ;;; Application
 
 (define UFO (make-posn 50 190))
-(define Tank (make-tank (make-posn 50 TANK-Y) -3))
+(define Tank (make-tank 50 -3))
 (define Missile (make-posn 45 40))
 (define s (make-fired UFO Tank Missile))
 
