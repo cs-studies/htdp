@@ -82,7 +82,7 @@
        (draw-gauge SCORE-MAX)
        (draw-gauge (vCham-score cham)))))
 
-;; Number Color -> Image
+;; Number -> Image
 ;; Returns a particular image of a chameleon
 ;; that depends on the chameleon's position.
 (check-expect (cham-image 12) CHAM2)
