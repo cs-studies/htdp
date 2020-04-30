@@ -5,6 +5,10 @@
 ;; Exercise 87.
 ;; Develop a data representation for an editor based on our first idea,
 ;; using a string and an index.
+;;
+;; Exercise 114.
+;; Use the predicates from exercise 113 to check
+;; ... the editor program (A Graphical Editor).
 
 
 (require 2htdp/universe)
@@ -53,6 +57,7 @@
 (define (run ed)
   (big-bang ed
     [to-draw render]
+    [check-with editor?] ; exercise 114
     [on-key edit]))
 
 ;; Editor -> Image

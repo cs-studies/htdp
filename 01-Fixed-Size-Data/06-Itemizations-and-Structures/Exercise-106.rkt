@@ -7,6 +7,10 @@
 ;; Given both a location and an animal,
 ;; it walks the latter across the canvas, starting from the given location.
 ;; It remains impossible to change the color of a cat or to pet a chameleon.
+;;
+;; Exercise 114.
+;; Use the predicates from exercise 113 to check
+;; ... the virtual pet program (exercise 106) ...
 
 
 (require 2htdp/universe)
@@ -97,6 +101,7 @@
     [to-draw render]
     [on-tick tick-handler]
     [on-key key-handler]
+    [check-with vAnimal?] ; exercise 114
     [stop-when end?]))
 
 
@@ -302,6 +307,15 @@
       SCORE-MAX
       (+ score n)))
 
+;; Any -> Boolean
+;; Check that animal is an element of the VAnimal collection.
+(check-expect (vAnimal? (make-vCat 300 60)) #true)
+(check-expect (vAnimal? (make-vCham 200 "blue" 77)) #true)
+(check-expect (vAnimal? 1) #false)
+(check-expect (vAnimal? "a") #false)
+(check-expect (vAnimal? (make-posn 2 3)) #false)
+(define (vAnimal? animal)
+  (or (vCat? animal) (vCham? animal)))
 
 ;; VAnimal -> Boolean
 ;; Identifies if to stop the program.

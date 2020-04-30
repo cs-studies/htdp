@@ -14,6 +14,11 @@
 ;; Design the function si-control, which plays the role of the key-event handler.
 ;; Once you have this function, you can define the si-main function,
 ;; which uses big-bang to spawn the game-playing window.
+;;
+;; Exercise 114.
+;; Use the predicates from exercise 113 to check
+;; - the space invader world program ...
+
 
 
 (require 2htdp/universe)
@@ -131,6 +136,7 @@
     [to-draw si-render]
     [on-tick si-move]
     [on-key si-control]
+    [check-with game-state?] ; exercise 114
     [stop-when si-game-over? si-render-final]))
 
 ;; GameState -> Image
@@ -332,6 +338,16 @@
    (+
     (expt (- (posn-x p1) (posn-x p2)) 2)
     (expt (- (posn-y p1) (posn-y p2)) 2))))
+
+;; Any -> Boolean
+;; Checks that gs is an element of the GameState collection.
+(check-expect (game-state? TEST-AIM) #true)
+(check-expect (game-state? TEST-HIT) #true)
+(check-expect (game-state? 1) #false)
+(check-expect (game-state? #true) #false)
+(check-expect (game-state? (make-posn 22 33)) #false)
+(define (game-state? gs)
+  (or (aim? gs) (fired? gs)))
 
 ;; GameState -> Image
 ;; Renders the last scene of the game.
