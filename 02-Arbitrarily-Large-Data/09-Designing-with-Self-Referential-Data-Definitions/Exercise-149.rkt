@@ -18,7 +18,7 @@
 
 ;; A List-of-strings is one of:
 ;; - '()
-;; - (cons String '())
+;; - (cons String List-of-strings)
 
 
 ;; N String -> List-of-strings 

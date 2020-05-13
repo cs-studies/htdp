@@ -18,7 +18,7 @@
 
 ;; A List-of-posns is one of:
 ;; - '()
-;; - (cons Posn '())
+;; - (cons Posn List-of-posns)
 
 
 ;;; Constants
