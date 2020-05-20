@@ -8,18 +8,30 @@
 
 (require 2htdp/batch-io)
 
+
+;;; Data Definitions
+
+;; A List-of-strings is one of:
+;; - '()
+;; - (cons String List-of-strings)
+
 ;; An LLS is one of:
 ;; – '()
 ;; – (cons List-of-strings LLS)
 ;; Represents a list of lines, each is a list of Strings.
 
 
+;;; Test Data
+
 (define line0 (cons "hello" (cons "world" '())))
 (define line1 '())
- 
+
 (define lls0 '())
 (define lls1 (cons line0 (cons line1 '())))
 (define lls2 (cons line0 (cons line0 '())))
+
+
+;;; Functions
 
 ;; LLS -> String
 ;; Converts a list of lines into a string.
@@ -34,17 +46,20 @@
      (string-append (collapse-line (first lls)) (collapse (rest lls)))]))
 
 ;; List-of-strings -> String
-;; Counts the words on each line in the given file.
+;; Concatenates the words on the list ln.
+(check-expect (collapse-line line0) "hello world\n")
+(check-expect (collapse-line line1) "")
 (define (collapse-line ln)
   (cond
     [(empty? ln) ""]
-    [(cons? ln)     
+    [(cons? ln)
      (string-append (first ln)
                     (if (empty? (rest ln)) "\n" " ")
                     (collapse-line (rest ln)))]))
 
 
 ;;; Application
+
 #|
 (write-file "files/ttt.dat"
             (collapse (read-words/line "files/ttt.txt")))
