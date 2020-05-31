@@ -12,7 +12,7 @@
 
 (check-expect list-1 (list #false #false))
 
-              
+
 (define list-2
   (list (+ 10 20) (* 10 20) (/ 10 20)))
 
