@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Major Version</key>
+  <integer>1</integer>
+  <key>Minor Version</key>
+  <integer>1</integer>
+  <key>Date</key>
+  <date>2015-08-06T19:52:58Z</date>
+  <key>Application Version</key>
+  <string>12.2.1.16</string>
+  <key>Features</key>
+  <integer>5</integer>
+  <key>Show Content Ratings</key>
+  <true/>
+  <key>Music Folder</key>
+  <string>file</string>
+  <key>Library Persistent ID</key>
+  <string>9F4A0C652637256D</string>
+  <key>Tracks</key>
+  <dict>
+  <key>442</key>
+  <dict>
+      <key>Track ID</key>
+      <integer>442</integer>
+      <key>Name</key>
+      <string>Wild Child</string>
+      <key>Artist</key>
+      <string>Enya</string>
+      <key>Album</key>
+      <string>A Day Without Rain</string>
+      <key>Genre</key>
+      <string>New Age</string>
+      <key>Kind</key>
+      <string>MPEG audio file</string>
+      <key>Size</key>
+      <integer>4562044</integer>
+      <key>Total Time</key>
+      <integer>227996</integer>
+      <key>Track Number</key>
+      <integer>2</integer>
+      <key>Track Count</key>
+      <integer>11</integer>
+      <key>Year</key>
+      <integer>2000</integer>
+      <key>Date Modified</key>
+      <date>2002-07-17T00:00:11Z</date>
+      <key>Date Added</key>
+      <date>2002-07-17T03:55:14Z</date>
+      <key>Bit Rate</key>
+      <integer>160</integer>
+      <key>Sample Rate</key>
+      <integer>44100</integer>
+      <key>Play Count</key>
+      <integer>20</integer>
+      <key>Play Date</key>
+      <integer>3388484113</integer>
+      <key>Play Date UTC</key>
+      <date>2011-05-17T17:35:13Z</date>
+      <key>Sort Album</key>
+      <string>Day Without Rain</string>
+      <key>Persistent ID</key>
+      <string>EBBE9171392FA348</string>
+      <key>Track Type</key>
+      <string>File</string>
+      <key>Location</key>
+      <string>file</string>
+      <key>File Folder Count</key>
+      <integer>4</integer>
+      <key>Library Folder Count</key>
+      <integer>1</integer>
+  </dict>
+  <key>444</key>
+  <dict>
+      <key>Track ID</key>
+      <integer>444</integer>
+      <key>Name</key>
+      <string>Only Time</string>
+      <key>Artist</key>
+      <string>Enya</string>
+      <key>Album</key>
+      <string>A Day Without Rain</string>
+      <key>Genre</key>
+      <string>New Age</string>
+      <key>Kind</key>
+      <string>MPEG audio file</string>
+      <key>Size</key>
+      <integer>4364035</integer>
+      <key>Total Time</key>
+      <integer>218096</integer>
+      <key>Track Number</key>
+      <integer>3</integer>
+      <key>Track Count</key>
+      <integer>11</integer>
+      <key>Year</key>
+      <integer>2000</integer>
+      <key>Date Modified</key>
+      <date>2002-07-17T00:00:21Z</date>
+      <key>Date Added</key>
+      <date>2002-07-17T03:55:42Z</date>
+      <key>Bit Rate</key>
+      <integer>160</integer>
+      <key>Sample Rate</key>
+      <integer>44100</integer>
+      <key>Play Count</key>
+      <integer>18</integer>
+      <key>Play Date</key>
+      <integer>3388484327</integer>
+      <key>Play Date UTC</key>
+      <date>2011-05-17T17:38:47Z</date>
+      <key>Sort Album</key>
+      <string>Day Without Rain</string>
+      <key>Persistent ID</key>
+      <string>EBBE9171392FA34A</string>
+      <key>Track Type</key>
+      <string>File</string>
+      <key>Location</key>
+      <string>file</string>
+      <key>File Folder Count</key>
+      <integer>4</integer>
+      <key>Library Folder Count</key>
+      <integer>1</integer>
+  </dict>
+  <key>446</key>
+  </dict>
+</dict>
+</plist>
+
