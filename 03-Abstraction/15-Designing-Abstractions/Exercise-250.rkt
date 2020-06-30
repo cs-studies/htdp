@@ -7,7 +7,7 @@
 ;; When tabulate is properly designed, use it to define a tabulation function for sqr and tan.
 
 
-;; Number -> [List-of Number]
+;; Number Function -> [List-of Number]
 ;; Tabulates g between n and 0 (incl.) in a list.
 (check-expect (tabulate 0 sin) (list 0))
 (check-expect (tabulate 0 sqrt) (list 0))

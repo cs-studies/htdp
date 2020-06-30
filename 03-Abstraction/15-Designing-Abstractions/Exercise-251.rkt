@@ -6,7 +6,7 @@
 ;; Design fold1, which is the abstraction of the two functions in figure 93.
 
 
-;; [List-of Number] -> Number
+;; [List-of Number] Function Number -> Number
 ;; Computes g of the numbers on l,
 ;; using on-empty value.
 (check-expect (fold1 '() + 0) 0)
