@@ -33,6 +33,27 @@
 ;; prefixes result:   a b c   a b   a
 
 
+;; Optional solution based on
+;; https://github.com/bgusach/exercises-htdp2e/blob/master/3-abstraction/ex-274.rkt
+(check-expect (prefixes2 (list "a" "b")) (list (list "a") (list "a" "b")))
+(define (prefixes2 l)
+  (local ((define (traverse x y)
+            (local ((define (prepend-x i)
+                      (cons x i)))
+              (map prepend-x (cons '() y)))))
+    (foldr traverse '() l)))
+
+;;; Prefixes2 Trace Table (top to down; left to right)
+;; (list "a" "b")
+;; x:                 "b"              "a"
+;; y:                 '()              '('("b"))
+;; map l:             (cons '() '())   (cons '() '('("b")))
+;; map l 2:           '('())           '('() '("b"))
+;; i:                 '()              '()                     '("b")
+;; prepend-x:         (cons "b" '())   (cons "a" '())          (cons "a" '("b"))
+;; map result:        '('("b"))                                '('("a") '("a" "b"))
+
+
 ;; [List-of 1String] -> [List-of [List-of 1String]]
 ;; Produces a list of all the suffixes of the given list.
 (check-expect (suffixes '()) '())
