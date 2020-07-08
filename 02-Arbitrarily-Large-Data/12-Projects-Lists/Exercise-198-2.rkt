@@ -54,13 +54,14 @@
 
 ;; Dictionary -> LC
 ;; Produces the LC for the letter that occurs most often
-;; as the first one in the given Dictionary d.
+;; in the given Dictionary d.
 (check-error (most-frequent.v2 '()) ERROR-EMPTY-DICT)
 (check-expect (most-frequent.v2 (list "cat")) (make-lc "c" 1))
 (check-expect (most-frequent.v2 (list "cat" "cheetah")) (make-lc "c" 2))
 (check-expect (most-frequent.v2 (list "cat" "cheetah" "dog")) (make-lc "c" 2))
 (check-expect (most-frequent.v2 (list "cat" "cheetah" "dog" "zombi" "zoo")) (make-lc "z" 2))
-(check-expect (most-frequent.v2 (list "zombi" "cheetah" "zoo" "cat" "dog")) (make-lc "c" 2))
+(check-expect (most-frequent.v2 (list "zombi" "cheetah" "zoo" "cat" "dog" "cute"))
+              (make-lc "c" 3))
 (define (most-frequent.v2 d)
   (cond
     [(empty? d) (error ERROR-EMPTY-DICT)]
@@ -141,13 +142,14 @@
 
 ;; Dictionary -> LC
 ;; Produces the LC for the letter that occurs most often
-;; as the first one in the given Dictionary d.
+;; in the given Dictionary d.
 (check-error (most-frequent.v1 '()) ERROR-EMPTY-DICT)
 (check-expect (most-frequent.v1 (list "cat")) (make-lc "c" 1))
 (check-expect (most-frequent.v1 (list "cat" "cheetah")) (make-lc "c" 2))
 (check-expect (most-frequent.v1 (list "cat" "cheetah" "dog")) (make-lc "c" 2))
 (check-expect (most-frequent.v1 (list "cat" "cheetah" "dog" "zombi" "zoo")) (make-lc "z" 2))
-(check-expect (most-frequent.v1 (list "zombi" "cheetah" "zoo" "cat" "dog")) (make-lc "c" 2))
+(check-expect (most-frequent.v1 (list "zombi" "cheetah" "zoo" "cat" "dog" "cute"))
+              (make-lc "c" 3))
 (define (most-frequent.v1 d)
   (cond
     [(empty? d) (error ERROR-EMPTY-DICT)]
