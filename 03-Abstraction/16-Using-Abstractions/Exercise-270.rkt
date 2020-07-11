@@ -51,7 +51,7 @@
 
 
 ;; Number -> [List-of [List-of Number]]
-;; Creates the list (list 0 ... (- n 1)).
+;; Creates a diagonal square of 0s and 1s.
 ;; Inline comments show execution steps results for n equals to 2.
 (check-expect (create-diagonal-square 1) (list (list 1)))
 (check-expect (create-diagonal-square 2) (list (list 1 0) (list 0 1)))
@@ -73,7 +73,5 @@
 (check-within (tabulate 2 sqrt) (list (sqrt 2) 1 0) 0.001)
 (define (tabulate n f)
   (reverse
-   (local ((define (tab i)
-             (f i)))
-     (build-list (add1 n) tab))))
+     (build-list (add1 n) f)))
 
