@@ -24,7 +24,7 @@
               (build-list (- l-length i) prefixes))))
     (build-list l-length wrapper)))
 
-;;; Prefixes Trace Table (top to down; left to right)
+;;; Prefixes Trace Table (top to bottom; left to right)
 ;; (list "a" "b" "c")
 ;; l-length:          3
 ;; i:                 0       1     2
@@ -43,15 +43,15 @@
               (map prepend-x (cons '() y)))))
     (foldr traverse '() l)))
 
-;;; Prefixes2 Trace Table (top to down; left to right)
+;;; Prefixes2 Trace Table (top to bottom; left to right)
 ;; (list "a" "b")
 ;; x:                 "b"              "a"
-;; y:                 '()              '('("b"))
-;; map l:             (cons '() '())   (cons '() '('("b")))
-;; map l 2:           '('())           '('() '("b"))
+;; y:                 '()              '(("b"))
+;; map l:             (cons '() '())   (cons '() '(("b")))
+;; map l 2:           '(())           '(() ("b"))
 ;; i:                 '()              '()                     '("b")
 ;; prepend-x:         (cons "b" '())   (cons "a" '())          (cons "a" '("b"))
-;; map result:        '('("b"))                                '('("a") '("a" "b"))
+;; map result:        '(("b"))                                '(("a") ("a" "b"))
 
 
 ;; [List-of 1String] -> [List-of [List-of 1String]]
@@ -72,7 +72,7 @@
               (build-list (- l-length i) suffixes))))
     (build-list l-length wrapper)))
 
-;;; Suffixes Trace Table (top to down; left to right)
+;;; Suffixes Trace Table (top to bottom; left to right)
 ;; (list "a" "b" "c")
 ;; l-length:          3
 ;; i:                 0       1     2

@@ -62,7 +62,7 @@
             (local ((define (off j) ;        0 1       0 1
                       (if (= i j) 1 0))) ;   1 0       0 1
               (build-list n off)))) ; 2    '(1 0)    '(0 1)
-    (build-list n diagonalize))) ; 2    '( '(1 0)    '(0 1) )
+    (build-list n diagonalize))) ; 2      '((1 0)     (0 1))
 
 
 ;; Number [Number -> Number] -> [List-of Number]
