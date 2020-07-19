@@ -51,12 +51,12 @@
 (check-expect (average-age Gustav 2015) 60.8)
 (define (average-age an-ftree year)
   (local (;; FT -> Number
-          (define (count-persons? an-ftree)
+          (define (count-persons an-ftree)
             (cond
               [(no-parent? an-ftree) 0]
               [else (+ 1
-                       (count-persons? (child-father an-ftree))
-                       (count-persons? (child-mother an-ftree)))]))
+                       (count-persons (child-father an-ftree))
+                       (count-persons (child-mother an-ftree)))]))
           ;; FT Number -> Number
           (define (sum-ages an-ftree)
             (cond
@@ -68,5 +68,5 @@
       [(no-parent? an-ftree) 0]
       [else (/
              (sum-ages an-ftree)
-             (count-persons? an-ftree))])))
+             (count-persons an-ftree))])))
 

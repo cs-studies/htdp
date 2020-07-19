@@ -41,13 +41,13 @@
 
 ;; FT -> Number
 ;; Counts the child structures in the given tree.
-(check-expect (count-persons? NP) 0)
-(check-expect (count-persons? Carl) 1)
-(check-expect (count-persons? Gustav) 5)
-(define (count-persons? an-ftree)
+(check-expect (count-persons NP) 0)
+(check-expect (count-persons Carl) 1)
+(check-expect (count-persons Gustav) 5)
+(define (count-persons an-ftree)
   (cond
     [(no-parent? an-ftree) 0]
     [else (+ 1
-              (count-persons? (child-father an-ftree))
-              (count-persons? (child-mother an-ftree)))]))
+              (count-persons (child-father an-ftree))
+              (count-persons (child-mother an-ftree)))]))
 
