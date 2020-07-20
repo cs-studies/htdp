@@ -25,7 +25,7 @@
   (cond
     [(string? x)
      (draw-rocket (- HEIGHT ROCKET-CENTER))]
-    [(<= -3 x -1)     
+    [(<= -3 x -1)
      (place-image (text (number->string x) 20 "red")
                   10 (* 3/4 WIDTH)
                   (draw-rocket (- HEIGHT ROCKET-CENTER)))]

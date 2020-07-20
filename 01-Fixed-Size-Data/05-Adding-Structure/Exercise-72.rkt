@@ -11,7 +11,7 @@
 ;; that accommodates the given examples.
 
 (define-struct phone [area number])
-;; A Phone is a structure: 
+;; A Phone is a structure:
 ;;   (make-phone Number String)
 ;; Interpretation:
 ;; area is an area code,
@@ -25,7 +25,7 @@
 ;; as precisely as possible with intervals.
 
 (define-struct phone# [area switch num])
-;; A Phone# is a structure: 
+;; A Phone# is a structure:
 ;;   (make-phone# Number Number Number)
 ;; Interpretation:
 ;; area is an area code [000, 999],

@@ -28,7 +28,7 @@
   (cond
     [(empty? (rest alot)) (first alot)]
     [else (+ (first alot) (sum (rest alot)))]))
- 
+
 ;; NEList-of-temperatures -> Number
 ;; Counts the temperatures on the given list.
 (check-expect (how-many (cons 10 '())) 1)

@@ -28,7 +28,7 @@
 ;; - Countdown
 ;; – FlightPosition
 
-;; A KeyEvent is one of: 
+;; A KeyEvent is one of:
 ;; – 1String
 ;; – "left"
 ;; – "right"
@@ -53,7 +53,7 @@
 
 ;; RocketLaunch -> RocketLaunch
 ;; This is a prototype.
-;; Call main2 to get a better working program. 
+;; Call main2 to get a better working program.
 (define (main1 rl)
   (big-bang rl
     [to-draw show]
@@ -82,7 +82,7 @@
   (cond
     [(string? rl)
      (draw-rocket ROCKET-GROUNDED-Y)]
-    [(<= -3 rl -1)     
+    [(<= -3 rl -1)
      (place-image (text (number->string rl) 20 "red")
                   10 (* 3/4 WIDTH)
                   (draw-rocket ROCKET-GROUNDED-Y))]

@@ -85,7 +85,7 @@
 (check-expect (as-color RED) RED)
 (check-expect (as-color GREEN) GREEN)
 (check-expect (as-color YELLOW) YELLOW)
-(define (as-color state) 
+(define (as-color state)
   (cond
     [(string=? GREEN state) GREEN]
     [(string=? YELLOW state) YELLOW]

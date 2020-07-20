@@ -83,7 +83,7 @@
     [(or (= 0 (cham-step x)) (= 2 (cham-step x))) CHAM1]
     [(= 1 (cham-step x)) CHAM2]
     [(= 3 (cham-step x)) CHAM3]))
-  
+
 ;; Number -> Number
 ;; Calculates current step of the cham animation
 ;; using a given x-coordinate.
@@ -164,5 +164,5 @@
 
 ;;; Application
 
-;(cham (make-vCham 0 100)) 
+;(cham (make-vCham 0 100))
 

@@ -49,7 +49,7 @@
 (define (posn-up-x p n)
   (make-posn n (posn-y p)))
 
-;; Posn Number Number MouseEvt -> Posn 
+;; Posn Number Number MouseEvt -> Posn
 ;; Resets the dot when the mouse is clicked.
 (check-expect
  (reset-dot (make-posn 10 20) 29 31 "button-down")

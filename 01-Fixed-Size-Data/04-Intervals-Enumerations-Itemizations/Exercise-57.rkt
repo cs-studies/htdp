@@ -27,7 +27,7 @@
 ;; - Countdown
 ;; – FlightPosition
 
-;; A KeyEvent is one of: 
+;; A KeyEvent is one of:
 ;; – 1String
 ;; – "left"
 ;; – "right"
@@ -72,7 +72,7 @@
   (cond
     [(string? rl)
      (draw-rocket ROCKET-GROUNDED-RL)]
-    [(<= -3 rl -1)     
+    [(<= -3 rl -1)
      (place-image (text (number->string rl) 20 "red")
                   10 (* 3/4 WIDTH)
                   (draw-rocket ROCKET-GROUNDED-RL))]

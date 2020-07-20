@@ -8,12 +8,12 @@
 ;; for the left-hand and right-hand data definition, respectively.
 
 
-;; A Set-of-numbers-L is one of: 
+;; A Set-of-numbers-L is one of:
 ;; – empty
 ;; – (cons Number Set-of-numbers-L)
 ;; May contain not unique numbers.
-	
-;; A Set-of-numbers-R is one of: 
+
+;; A Set-of-numbers-R is one of:
 ;; – empty
 ;; – (cons Number Set-of-numbers-R)
 ;; Contains only unique numbers.

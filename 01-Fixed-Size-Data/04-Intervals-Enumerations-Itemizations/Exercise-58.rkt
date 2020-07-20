@@ -10,7 +10,7 @@
 
 ;; Data Definitions
 
-;; A Price falls into one of three intervals: 
+;; A Price falls into one of three intervals:
 ;; — 0 through 999
 ;; — 1000 through 9999
 ;; — 10000 and above.
@@ -25,7 +25,7 @@
 (define RATE-1 0.05)
 (define RATE-2 0.08)
 
-  
+
 ;; Functions Definitions
 
 ;; Price -> Number

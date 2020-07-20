@@ -24,7 +24,7 @@
 ;;; Data Definition 2
 
 ;; H is a Number between 0 and 100.
-;; interpretation represents a happiness value 
+;; interpretation represents a happiness value
 
 (define MAX 100)
 (define MIN 0)
@@ -37,7 +37,7 @@
 ;; A Person is a structure:
 ;;   (make-person String String Boolean)
 
-(define turing (make-person "Alan" "Turing" #true)) 
+(define turing (make-person "Alan" "Turing" #true))
 
 (person-fstname turing)
 (person-lstname turing)
@@ -55,7 +55,7 @@
 
 (define-struct dog [owner name age happiness])
 ;; A Dog is a structure:
-;;   (make-dog Person String PositiveInteger H) 
+;;   (make-dog Person String PositiveInteger H)
 
 (define puppy (make-dog turing "Puppy" 2 MAX))
 

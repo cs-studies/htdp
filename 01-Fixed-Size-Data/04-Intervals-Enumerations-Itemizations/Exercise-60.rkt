@@ -104,7 +104,7 @@
 (check-expect (as-color 1) "green")
 (check-expect (as-color 2) "yellow")
 (check-expect (as-color 100) "red") ; expect to handle an invalid state
-(define (as-color state) 
+(define (as-color state)
   (cond
     [(= 1 state) "green"]
     [(= 2 state) "yellow"]

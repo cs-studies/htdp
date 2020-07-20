@@ -20,7 +20,7 @@
 ;; (define CENTER (quotient 400 2))
 ;; ==
 ;; (define CENTER 200)
- 
+
 (define-struct game [left-player right-player ball])
 
 (define game0

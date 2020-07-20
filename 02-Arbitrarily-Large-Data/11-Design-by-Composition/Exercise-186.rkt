@@ -74,5 +74,5 @@
 ;;
 ;; check-satisfied cannot be used, because sort>/bad always returns
 ;; a static sorted list. This way, sort>/bad always satisfies sorted>? predicate,
-;; returning the sorted (list 9 8 7 6 5 4 3 2 1 0) given any argument. 
+;; returning the sorted (list 9 8 7 6 5 4 3 2 1 0) given any argument.
 

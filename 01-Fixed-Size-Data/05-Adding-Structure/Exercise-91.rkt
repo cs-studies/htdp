@@ -10,7 +10,7 @@
 ;; so that the cat moves in the specified direction.
 ;; The program should move the cat in the current direction,
 ;; and it should turn the cat around
-;; when it reaches either end of the scene. 
+;; when it reaches either end of the scene.
 
 
 (require 2htdp/universe)
@@ -145,7 +145,7 @@
     [(<= CAT-X-MAX (x+delta w))
      (make-walk CAT-X-MAX (- 0 (abs (walk-delta w))))]
     [else (make-walk (x+delta w) (walk-delta w))]))
-   
+
 ;; Walk -> Number
 ;; Calculates a sum of walk-x and walk-delta.
 (check-expect (x+delta (make-walk 0 3)) 3)
@@ -156,7 +156,7 @@
 (check-expect (x+delta (make-walk 1000 -3)) 997)
 (define (x+delta w)
   (+ (walk-x w) (walk-delta w)))
-  
+
 ;; Score -> Score
 ;; Produces next score of a happiness gauge.
 (check-expect (next-score 100) (- 100 SCORE-DECREASE))

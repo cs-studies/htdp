@@ -16,7 +16,7 @@
 ;; An Editor is a structure:
 ;;   (make-editor String String)
 ;; (make-editor s t) describes an editor
-;; whose visible text is (string-append s t) with 
+;; whose visible text is (string-append s t) with
 ;; the cursor displayed between s and t
 
 

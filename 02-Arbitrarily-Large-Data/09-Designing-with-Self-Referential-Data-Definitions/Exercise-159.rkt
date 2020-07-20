@@ -28,7 +28,7 @@
 
 (define-struct pair [num posns])
 ;; A Pair is a structure (make-pair N List-of-posns)
-;; (make-pair n p) means n balloons 
+;; (make-pair n p) means n balloons
 ;; must yet be thrown and added to the list p.
 
 
@@ -42,7 +42,7 @@
 
 (define HALL-WIDTH (* HALL-COLS SQUARE-SIZE))
 (define HALL-HEIGHT (* HALL-ROWS SQUARE-SIZE))
- 
+
 ;;; Functions
 
 ;; N -> Pair

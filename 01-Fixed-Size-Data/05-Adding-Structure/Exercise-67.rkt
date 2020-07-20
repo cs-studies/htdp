@@ -19,7 +19,7 @@
 
 
 ;; Instance 1.
-(check-expect (balld-location new-balld1) 5) 
+(check-expect (balld-location new-balld1) 5)
 (define new-balld1 (make-balld 5 "down"))
 
 ;; Instance 2.

@@ -9,7 +9,7 @@
 ;; Also design checked-sum.
 
 
-;; A List-of-numbers is one of: 
+;; A List-of-numbers is one of:
 ;; – '()
 ;; – (cons Number List-of-numbers)
 

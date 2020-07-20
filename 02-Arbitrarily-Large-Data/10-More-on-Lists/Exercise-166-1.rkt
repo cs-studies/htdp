@@ -22,7 +22,7 @@
 ;; - (cons Paycheck List-of-paychecks)
 
 (define-struct work [employee rate hours])
-;; A (piece of) Work is a structure: 
+;; A (piece of) Work is a structure:
 ;;   (make-work String Number Number)
 ;; (make-work n r h) combines the name n
 ;; with the pay rate r and the number of hours h.

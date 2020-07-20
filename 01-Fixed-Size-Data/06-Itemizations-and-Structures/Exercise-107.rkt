@@ -127,7 +127,7 @@
 (check-expect (zoo-animal TEST-ZOO-KITTY) (zoo-cat TEST-ZOO-KITTY))
 (define (zoo-animal zoo)
   (if (string=? LIZARD (zoo-focus zoo)) (zoo-cham zoo) (zoo-cat zoo)))
-  
+
 ;; VAnimal -> Number
 ;; Returns x-coordinate of the animal.
 (check-expect (animal-x TEST-CHAM) (vCham-x TEST-CHAM))
@@ -169,7 +169,7 @@
    (if (> (animal-score (zoo-animal zoo)) SCORE-MAX)
        (draw-gauge SCORE-MAX (zoo-focus zoo))
        (draw-gauge (animal-score (zoo-animal zoo)) (zoo-focus zoo)))))
-  
+
 ;; VAnimal -> Image
 ;; Returns an image of a particular animal.
 (define (animal-image animal)
@@ -257,7 +257,7 @@
     (next-x (zoo-cat zoo))
     (next-score (zoo-cat zoo)))
    (zoo-focus zoo)))
-  
+
 ;; VAnimal -> Number
 ;; Calculates the next x-coordinate of the animal position.
 ;; If the animal leaves the canvas, starts over from the leftmost position.
@@ -281,7 +281,7 @@
     [(<= (animal-score animal) SCORE-DECREASE) 0]
     [else (- (animal-score animal) SCORE-DECREASE)]))
 
- 
+
 ;; Zoo KeyEvent -> Zoo
 ;; Changes a state of the animal on a key press as follows:
 ;; - "down" increases focus animal happiness level
@@ -362,7 +362,7 @@
 (check-expect (cham-with-color (make-vCham 0 RED 100) BLUE) (make-vCham 0 BLUE 100))
 (define (cham-with-color cham color)
   (make-vCham (vCham-x cham) color (vCham-score cham)))
-   
+
 ;; Score Number -> Number
 ;; Increases score value by n points.
 (check-expect (score+ SCORE-MAX 1) SCORE-MAX)

@@ -15,7 +15,7 @@
 (define STOP 0)
 (define WALK 1)
 (define PREPARE 2)
-  
+
 ;; A Light is one of:
 ;; - STOP
 ;; - WALK
@@ -46,7 +46,7 @@
 (define BACKGROUND (empty-scene WIDTH HEIGHT "LemonChiffon"))
 
 (define STOP-IMAGE (bitmap "./images/stop.png"))
-(define WALK-IMAGE (bitmap "./images/walk.png"))  
+(define WALK-IMAGE (bitmap "./images/walk.png"))
 
 (define TIMER-MAX 10) ; seconds
 
@@ -65,7 +65,7 @@
   (big-bang tls
     [to-draw render]
     [on-tick tick-handler 1] ; tick once per second.
-    [on-key key-handler]))  
+    [on-key key-handler]))
 
 ;; TL -> Image
 ;; Renders a traffic light image.

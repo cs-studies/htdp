@@ -25,7 +25,7 @@
 ;; An Editor is a structure:
 ;;   (make-editor String Index)
 ;; (make-editor s i) describes an editor with
-;; - the visible text s, 
+;; - the visible text s,
 ;; - the cursor at Index i.
 
 (define CURSOR-WIDTH 1)

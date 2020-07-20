@@ -13,7 +13,7 @@
 (check-expect (tock 78) 81)
 
 ;; Definitions
-;; WorldState -> WorldState 
+;; WorldState -> WorldState
 ;; moves the car by 3 pixels for every clock tick
 (define (tock ws)
   (+ ws 3))

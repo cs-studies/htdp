@@ -7,7 +7,7 @@
 ;; Design the sum function.
 
 
-;; A List-of-amounts is one of: 
+;; A List-of-amounts is one of:
 ;; – '()
 ;; – (cons PositiveNumber List-of-amounts)
 ;; Represents sequences of amounts of money.

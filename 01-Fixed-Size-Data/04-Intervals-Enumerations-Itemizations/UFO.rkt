@@ -9,7 +9,7 @@
 
 ;; A WorldState is a Number.
 ;; Represents the number of pixels between the top and the UFO.
-;; Falls into one of three intervals: 
+;; Falls into one of three intervals:
 ;; – between 0 and CLOSE
 ;; – between CLOSE and LAND
 ;; – below LAND
@@ -17,7 +17,7 @@
 
 ;; Constants Definitions
 
-(define WIDTH 300) ; distances in terms of pixels 
+(define WIDTH 300) ; distances in terms of pixels
 (define HEIGHT 100)
 (define MTSCN (empty-scene WIDTH HEIGHT))
 
@@ -45,12 +45,12 @@
     [on-tick next-y]
     [to-draw render]
     [stop-when end?]))
- 
+
 ;; WorldState -> WorldState
 (check-expect (next-y 11) 14)
 (define (next-y y)
   (+ y UFO-VELOCITY))
- 
+
 ;; WorldState -> Image
 (check-expect (render 10) (render 10))
 (define (render y)

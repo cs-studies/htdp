@@ -19,9 +19,9 @@
                      (string=? "green" x)
                      (string=? "yellow" x))]
     [else #false]))
- 
+
 ; Any Any -> Boolean
-; are the two values elements of TrafficLight and, 
+; are the two values elements of TrafficLight and,
 ; if so, are they equal
 (check-expect (light=? "red" "red") #true)
 (check-expect (light=? "red" "green") #false)

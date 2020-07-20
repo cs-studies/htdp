@@ -30,7 +30,7 @@
      (if (> (first whrs) MAX-HOURS)
          (error HOURS-ERROR)
          (cons (wage (first whrs)) (wage* (rest whrs))))]))
- 
+
 ;; Number -> Number
 ;; Computes the wage for h hours of work.
 (check-expect (wage 0) 0)

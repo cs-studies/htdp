@@ -12,21 +12,21 @@
 
 ;;; Data Definitions
 
-;; A List-of-numbers is one of: 
+;; A List-of-numbers is one of:
 ;; – '()
 ;; – (cons Number List-of-numbers)
 
-;; A ShotWorld is a List-of-numbers. 
+;; A ShotWorld is a List-of-numbers.
 ;; Each number on such a list
 ;; represents the y-coordinate of a shot.
 
 
 ;;; Constants
 
-(define HEIGHT 220) ; distances in terms of pixels 
+(define HEIGHT 220) ; distances in terms of pixels
 (define WIDTH 30)
 (define SHOTS-X (- (/ WIDTH 2) 5))
- 
+
 (define BACKGROUND (empty-scene WIDTH HEIGHT "green"))
 (define SHOT (rectangle 3 6 "solid" "black"))
 
@@ -40,7 +40,7 @@
     [on-tick tick-handler]
     [on-key key-handler]
     [to-draw render]))
- 
+
 ;; ShotWorld -> Image
 ;; Adds the image of a shot for each y on the list w
 ;; at (SHOTS-X, y) to the background image.
@@ -63,7 +63,7 @@
     [(empty? w) '()]
     [else (cons (sub1 (first w)) (tick-handler (rest w)))]))
 
-;; ShotWorld KeyEvent -> ShotWorld 
+;; ShotWorld KeyEvent -> ShotWorld
 ;; Adds a shot to the world
 ;; if the player presses the space bar.
 (check-expect (key-handler '() "a") '())

@@ -23,7 +23,7 @@
 
 (define SQUARE (square 20 "solid" "red"))
 (define STAR (star 10 "solid" "yellow"))
-                        
+
 ;; List-of-images PositiveNumber -> ImageOrFalse
 ;; Produces the first image on the list l
 ;; that is not an n by b square.

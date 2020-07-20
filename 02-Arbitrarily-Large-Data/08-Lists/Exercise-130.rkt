@@ -6,7 +6,7 @@
 ;; Create an element of List-of-names that contains five Strings.
 
 
-;; A List-of-names is one of: 
+;; A List-of-names is one of:
 ;; – '()
 ;; – (cons String List-of-names)
 ;; Represents a list of invitees, by last name.

@@ -7,7 +7,7 @@
 ;; that moves the car according to a sine wave.
 ;;
 ;; An AnimationState is a Number.
-;; interpretation the number of clock ticks 
+;; interpretation the number of clock ticks
 ;; since the animation started.
 
 (require 2htdp/universe)
@@ -77,7 +77,7 @@
 ;;              = x * 2 * Pi * Frequency / Image_Width
 ;; y(x) = Amplitude * sin(x_in_radians) + Vertical_Shift
 (define (y-position ticks)
-  (+ 
+  (+
    (* SINE-AMPLITUDE -1 ; change sign to match orientation of the canvas
       (sin
         (* (x-position ticks) 2 pi (/ SINE-FREQUENCY BACKGROUND-WIDTH))))

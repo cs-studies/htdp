@@ -8,26 +8,26 @@
 
 ;;; SIGS
 
-; A UFO is a Posn. 
-; interpretation (make-posn x y) is the UFO's location 
+; A UFO is a Posn.
+; interpretation (make-posn x y) is the UFO's location
 ; (using the top-down, left-to-right convention)
- 
+
 (define-struct tank [loc vel])
 ; A Tank is a structure:
-;   (make-tank Number Number). 
+;   (make-tank Number Number).
 ; interpretation (make-tank x dx) specifies the position:
-; (x, HEIGHT) and the tank's speed: dx pixels/tick 
- 
-; A Missile is a Posn. 
+; (x, HEIGHT) and the tank's speed: dx pixels/tick
+
+; A Missile is a Posn.
 ; interpretation (make-posn x y) is the missile's place
 
 (define-struct aim [ufo tank])
 (define-struct fired [ufo tank missile])
 
-; A SIGS is one of: 
+; A SIGS is one of:
 ; – (make-aim UFO Tank)
 ; – (make-fired UFO Tank Missile)
-; interpretation represents the complete state of a 
+; interpretation represents the complete state of a
 ; space invader game
 
 ;; Any -> Boolean
@@ -39,14 +39,14 @@
 (check-expect (sigs? (make-posn 22 33)) #false)
 (define (sigs? v)
   (or (aim? v) (fired? v)))
-  
+
 
 ;;; Coordinate
 
-; A Coordinate is one of: 
-; – a NegativeNumber 
+; A Coordinate is one of:
+; – a NegativeNumber
 ; interpretation on the y axis, distance from top
-; – a PositiveNumber 
+; – a PositiveNumber
 ; interpretation on the x axis, distance from left
 ; – a Posn
 ; interpretation an ordinary Cartesian point

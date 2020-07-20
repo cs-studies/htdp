@@ -40,7 +40,7 @@
              '()))
 (check-expect LW3 (cons W3 '()))
 (check-expect LW3 (list W3))
-                
+
 (define LW4 (cons
              (cons "a" (cons "m" '()))
              (cons

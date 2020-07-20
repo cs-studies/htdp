@@ -27,7 +27,7 @@
 ;; An FSMState is one of:
 ;; – AA
 ;; – BB
-;; – DD 
+;; – DD
 ;; – ER
 ;; Represents states of the finite state machine with
 ;; each state reached in a particular order on these events:

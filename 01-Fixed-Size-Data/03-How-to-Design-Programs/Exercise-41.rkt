@@ -51,7 +51,7 @@
 (define BACKGROUND
   (place-image TREE
                (/ BACKGROUND-WIDTH 3)
-               (- BACKGROUND-HEIGHT (/ (image-height TREE) 2))    
+               (- BACKGROUND-HEIGHT (/ (image-height TREE) 2))
                (empty-scene BACKGROUND-WIDTH BACKGROUND-HEIGHT)))
 
 (define Y-CAR (- BACKGROUND-HEIGHT (/ (image-height CAR) 2)))
@@ -68,7 +68,7 @@
 (define (render ws)
   (place-image CAR ws Y-CAR BACKGROUND))
 
-;; WorldState -> WorldState 
+;; WorldState -> WorldState
 ;; Sets world state for every clock tick.
 (define (tick-handler ws)
   (+ ws VELOCITY))

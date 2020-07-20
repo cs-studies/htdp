@@ -5,7 +5,7 @@
 ;; Exercise 158.
 ;; Design an alternative tick-handler function
 ;; that doesn’t just move shots one pixel per clock tick
-;; but also eliminates those whose coordinates place them above the canvas. 
+;; but also eliminates those whose coordinates place them above the canvas.
 
 
 (require 2htdp/universe)
@@ -14,21 +14,21 @@
 
 ;;; Data Definitions
 
-;; A List-of-numbers is one of: 
+;; A List-of-numbers is one of:
 ;; – '()
 ;; – (cons Number List-of-numbers)
 
-;; A ShotWorld is a List-of-numbers. 
+;; A ShotWorld is a List-of-numbers.
 ;; Each number on such a list
 ;; represents the y-coordinate of a shot.
 
 
 ;;; Constants
 
-(define HEIGHT 80) ; distances in terms of pixels 
+(define HEIGHT 80) ; distances in terms of pixels
 (define WIDTH 100)
 (define SHOTS-X (/ WIDTH 2))
- 
+
 (define BACKGROUND (empty-scene WIDTH HEIGHT))
 (define SHOT (triangle 3 "solid" "red"))
 
@@ -43,7 +43,7 @@
     [on-key key-handler]
     ;[state #true]
     [to-draw render]))
- 
+
 ;; ShotWorld -> Image
 ;; Adds the image of a shot for each y on the list w
 ;; at (SHOTS-X, y) to the background image.
@@ -72,7 +72,7 @@
          (tick-handler (rest w))
          (cons (sub1 (first w)) (tick-handler (rest w))))]))
 
-;; ShotWorld KeyEvent -> ShotWorld 
+;; ShotWorld KeyEvent -> ShotWorld
 ;; Adds a shot to the world
 ;; if the player presses the space bar.
 (check-expect (key-handler '() "a") '())

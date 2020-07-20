@@ -55,7 +55,7 @@
 (check-expect (draw-lens "green" "yellow") (circle LENS-RADIUS "outline" "green"))
 (define (draw-lens lens state)
   (circle LENS-RADIUS (mode lens state) lens))
-  
+
 ;; State State -> LensMode
 (check-expect (mode "green" "red") "outline")
 (check-expect (mode "red" "red") "solid")

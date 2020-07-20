@@ -11,12 +11,12 @@
 (define-struct pair [left right])
 ; A ConsPair is a structure:
 ;   (make-pair Any Any).
- 
-; A ConsOrEmpty is one of: 
+
+; A ConsOrEmpty is one of:
 ; – '()
 ; – (make-pair Any ConsOrEmpty)
 ; interpretation ConsOrEmpty is the class of all lists
- 
+
 ; Any Any -> ConsOrEmpty
 (define (our-cons a-value a-list)
   (cond

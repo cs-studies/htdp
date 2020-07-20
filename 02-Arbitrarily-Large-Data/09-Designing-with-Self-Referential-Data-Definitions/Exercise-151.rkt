@@ -6,7 +6,7 @@
 ;; Design the function multiply.
 ;; How does multiply relate to what you know from grade school?
 
-;; An N is one of: 
+;; An N is one of:
 ;; – 0
 ;; – (add1 N)
 ;; Represents the counting numbers.

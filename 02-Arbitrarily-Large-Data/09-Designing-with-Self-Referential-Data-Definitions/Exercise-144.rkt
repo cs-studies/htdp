@@ -7,10 +7,10 @@
 ;; even though they are designed for inputs from List-of-temperatures?
 
 
-;; A List-of-temperatures is one of: 
+;; A List-of-temperatures is one of:
 ;; – '()
 ;; – (cons CTemperature List-of-temperatures)
- 
+
 ;; A CTemperature is a Number greater than -272.
 
 ;; An NEList-of-temperatures is one of:
@@ -34,7 +34,7 @@
   (cond
     [(empty? alot) 0]
     [else (+ (first alot) (sum (rest alot)))]))
- 
+
 ;; List-of-temperatures -> Number
 ;; Counts the temperatures on the given list.
 (check-expect (how-many '()) 0)

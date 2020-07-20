@@ -34,7 +34,7 @@
 
 
 ;;; Question
-;; Which of the sketches do you like better? 
+;; Which of the sketches do you like better?
 
 ;;; Answer
 ;; The sketches that list the boxes in the order in which they are consed together.

@@ -94,7 +94,7 @@
     [(or (= 0 (cham-step x)) (= 2 (cham-step x))) CHAM1]
     [(= 1 (cham-step x)) CHAM2]
     [(= 3 (cham-step x)) CHAM3]))
-  
+
 
 ;; Color -> Image
 ;; Produces a rectangle of a specified color.
@@ -203,5 +203,5 @@
 
 ;;; Application
 
-;(cham (make-vCham 0 "green" 100)) 
+;(cham (make-vCham 0 "green" 100))
 

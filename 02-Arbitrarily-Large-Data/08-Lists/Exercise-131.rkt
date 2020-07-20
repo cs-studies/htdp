@@ -7,7 +7,7 @@
 ;; The class contains all arbitrarily long lists of Booleans.
 
 
-;; A List-of-bools is one of: 
+;; A List-of-bools is one of:
 ;; – '()
 ;; – (cons Boolean List-of-bools)
 

@@ -23,16 +23,16 @@
     (body fst lst)
     "\n\n"
     (closing signature-name)))
- 
+
 (define (opening fst)
   (string-append "Dear " fst ","))
- 
+
 (define (body fst lst)
   (string-append
    "We have discovered that all people with the" "\n"
    "last name " lst " have won our lottery. So, " "\n"
    fst ", " "hurry and pick up your prize."))
- 
+
 (define (closing signature-name)
   (string-append
    "Sincerely,"
@@ -45,8 +45,8 @@
 (define LST "./files/lst.txt")
 (define SIGNATURE "./files/signature.txt")
 (define OUT "./files/out.txt")
-  
-;; Application  
+
+;; Application
 (write-file FST "Jean")
 (write-file LST "Jennings")
 (write-file SIGNATURE "Bartik")

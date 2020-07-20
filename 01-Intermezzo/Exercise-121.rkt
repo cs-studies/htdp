@@ -42,7 +42,7 @@
 (cond
   [#false #false]
   [(> 2 1) (string=? "a" "a")]
-  [else (= (/  1 2) 9)])  
+  [else (= (/  1 2) 9)])
 ;; ==
 (cond
   [(> 2 1) (string=? "a" "a")]
@@ -50,7 +50,7 @@
 ;; ==
 (cond
   [#true (string=? "a" "a")]
-  [else (= (/  1 2) 9)]) 
+  [else (= (/  1 2) 9)])
 ;; ==
 (string=? "a" "a")
 ;; ==

@@ -20,7 +20,7 @@
 (define shape (rectangle 40 40 "solid" "white"))
 (define shape-width (image-width shape))
 (define shape-height (image-height shape))
-  
+
 ;; Application
 (if (>= (image-height cat) (image-width cat)) "tall" "wide")
 

@@ -9,8 +9,8 @@
 
 (define-struct layer [color doll])
 
-;; A Doll is one of: 
-;; – String 
+;; A Doll is one of:
+;; – String
 ;; – (make-layer String Doll)
 
 

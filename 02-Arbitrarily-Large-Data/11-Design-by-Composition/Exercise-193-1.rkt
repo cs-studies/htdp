@@ -29,7 +29,7 @@
    (make-posn 20 10)
    (make-posn 20 20)
    (make-posn 30 20)))
- 
+
 (define square-p
   (list
    (make-posn 10 10)

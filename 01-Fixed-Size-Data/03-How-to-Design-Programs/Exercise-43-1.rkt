@@ -6,7 +6,7 @@
 ;; Let’s work through the same problem statement
 ;; with a time-based data definition:
 ;; An AnimationState is a Number.
-;; interpretation the number of clock ticks 
+;; interpretation the number of clock ticks
 ;; since the animation started.
 
 (require 2htdp/universe)

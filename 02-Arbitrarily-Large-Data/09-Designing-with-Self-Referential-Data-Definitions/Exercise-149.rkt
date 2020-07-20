@@ -11,7 +11,7 @@
 (require 2htdp/image)
 
 
-;; An N is one of: 
+;; An N is one of:
 ;; – 0
 ;; – (add1 N)
 ;; Represents the counting numbers.
@@ -21,7 +21,7 @@
 ;; - (cons String List-of-strings)
 
 
-;; N String -> List-of-strings 
+;; N String -> List-of-strings
 ;; Creates a list of n copies of s
 (check-expect (copier 0 "hello") '())
 (check-expect (copier 2 "hello")

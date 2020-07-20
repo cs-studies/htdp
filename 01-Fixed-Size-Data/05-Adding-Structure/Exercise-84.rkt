@@ -14,7 +14,7 @@
 ;; An Editor is a structure:
 ;;   (make-editor String String)
 ;; (make-editor s t) describes an editor
-;; whose visible text is (string-append s t) with 
+;; whose visible text is (string-append s t) with
 ;; the cursor displayed between s and t
 
 
@@ -42,11 +42,11 @@
 (define (edit ed ke)
   (cond
     [(string=? ke "left")
-     (make-editor 
+     (make-editor
       (string-remove-last (editor-pre ed))
       (string-append (string-last (editor-pre ed)) (editor-post ed)))]
     [(string=? ke "right")
-     (make-editor 
+     (make-editor
       (string-append (editor-pre ed) (string-first (editor-post ed)))
       (string-remove-first (editor-post ed)))]
     [(string=? ke "\b")

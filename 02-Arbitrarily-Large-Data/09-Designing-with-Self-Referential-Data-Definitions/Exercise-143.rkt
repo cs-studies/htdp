@@ -6,10 +6,10 @@
 ;; Design checked-average function.
 
 
-;; A List-of-temperatures is one of: 
+;; A List-of-temperatures is one of:
 ;; – '()
 ;; – (cons CTemperature List-of-temperatures)
- 
+
 ;; A CTemperature is a Number greater than -272.
 
 (define ERROR-MESSAGE "checked-average expects not empty list")
@@ -22,7 +22,7 @@
   (cond
     [(empty? alot) (error ERROR-MESSAGE)]
     [else (/ (sum alot) (how-many alot))]))
- 
+
 ;; List-of-temperatures -> Number
 ;; Adds up the temperatures on the given list.
 (check-expect
@@ -31,7 +31,7 @@
   (cond
     [(empty? alot) 0]
     [else (+ (first alot) (sum (rest alot)))]))
- 
+
 ;; List-of-temperatures -> Number
 ;; Counts the temperatures on the given list.
 (check-expect (how-many '()) 0)

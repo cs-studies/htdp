@@ -7,7 +7,7 @@
 ;; which determines whether some given string occurs on a given list of strings.
 
 
-;; A List-of-strings is one of: 
+;; A List-of-strings is one of:
 ;; – '()
 ;; – (cons String List-of-strings)
 

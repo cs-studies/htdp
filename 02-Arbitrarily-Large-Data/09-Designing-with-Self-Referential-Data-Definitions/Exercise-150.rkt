@@ -8,7 +8,7 @@
 ;; which adds a natural number n to some arbitrary number x without using +.
 
 
-;; An N is one of: 
+;; An N is one of:
 ;; – 0
 ;; – (add1 N)
 ;; Represents the counting numbers.

@@ -21,7 +21,7 @@
 ;; #true
 
 
-;; A List-of-names is one of: 
+;; A List-of-names is one of:
 ;; – '()
 ;; – (cons String List-of-names)
 ;; Represents a contact list for a cell phone.

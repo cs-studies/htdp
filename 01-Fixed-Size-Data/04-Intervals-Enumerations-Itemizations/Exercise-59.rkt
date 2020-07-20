@@ -15,7 +15,7 @@
 ;; – "red"
 ;; – "green"
 ;; – "yellow"
-;; Represents the possible states of a traffic light. 
+;; Represents the possible states of a traffic light.
 
 ;; An ImageMode is one of the following Strings:
 ;; - "outline"

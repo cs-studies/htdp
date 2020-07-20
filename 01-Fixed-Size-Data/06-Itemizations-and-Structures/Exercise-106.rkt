@@ -259,7 +259,7 @@
     [(<= (animal-score animal) SCORE-DECREASE) 0]
     [else (- (animal-score animal) SCORE-DECREASE)]))
 
- 
+
 ;; VAnimal KeyEvent -> VAnimal
 ;; Changes a state of the animal on a key press as follows:
 ;; - "down" increases happiness level,

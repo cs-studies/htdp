@@ -4,7 +4,7 @@
 ;;
 ;; Exercise 75.
 ;; Enter "UFO" definitions and their test cases
-;; into the definitions area of DrRacket and make sure they work. 
+;; into the definitions area of DrRacket and make sure they work.
 
 
 ;;; Data Definitions
@@ -49,7 +49,7 @@
   (make-ufo (posn+ (ufo-loc u) (ufo-vel u))
             (ufo-vel u)))
 
-;; Posn Vel -> Posn 
+;; Posn Vel -> Posn
 ;; Adds v to p.
 (check-expect (posn+ p1 v1) p2)
 (check-expect (posn+ p1 v2) (make-posn 17 77))

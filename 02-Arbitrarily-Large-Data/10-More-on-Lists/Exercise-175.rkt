@@ -13,7 +13,7 @@
 ;; An Info is a structure
 ;;  (make-info Number Number Number)
 ;; (make-info l w c) represents an information about a file
-;; with l lines, w words, and c characters. 
+;; with l lines, w words, and c characters.
 
 
 

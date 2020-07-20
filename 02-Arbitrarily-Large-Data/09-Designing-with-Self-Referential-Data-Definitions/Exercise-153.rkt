@@ -29,7 +29,7 @@
 (define HALL-COLS 8)
 (define HALL-ROWS 18)
 
- 
+
 ;;; Functions
 
 ;; List-of-posns -> Image

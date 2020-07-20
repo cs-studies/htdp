@@ -41,7 +41,7 @@
 (define lls0 '())
 (define lls1 (cons line0 (cons line1 '())))
 (define lls2 (cons line0 (cons line0 '())))
-(define lls3 (cons line0 (cons line1 (cons line2 (cons line3 '()))))) 
+(define lls3 (cons line0 (cons line1 (cons line2 (cons line3 '())))))
 
 
 ;;; Functions
@@ -89,7 +89,7 @@
 (define (collapse-line ln)
   (cond
     [(empty? ln) ""]
-    [(cons? ln)     
+    [(cons? ln)
      (string-append (if (article? (first ln)) "" (first ln))
                     (if (empty? (rest ln))
                         "\n"
