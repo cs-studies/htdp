@@ -7,7 +7,6 @@
 ;; It consumes a family tree and a year (N).
 ;; It produces the average age
 ;; of all child instances in the forest.
-;; (Act as if the trees don’t overlap.)
 
 
 (require 2htdp/abstraction)
@@ -42,7 +41,7 @@
 
 (define ff1 (list Carl Bettina))
 (define ff2 (list Fred Eva))
-(define ff3 (list Fred Eva Gustav))
+(define ff3 (list Gustav Adam))
 
 
 ;;; Functions
@@ -51,10 +50,25 @@
 ;; Produces the average age
 ;; of all child structures in the family tree.
 (check-expect (average-age ff1 2020) 94)
-(check-expect (average-age ff2 2020) 54.5)
-(check-expect (average-age ff3 2020) 47)
+(check-expect (average-age ff2 2020) 74.25)
+(check-expect (average-age ff3 2020) 73.375)
 (define (average-age a-forest year)
-  (/
-   (for/sum ([ft a-forest]) (- year (child-date ft)))
-   (length a-forest)))
+  (local (
+          (define (sum-ages an-ftree)
+            (cond
+              [(no-parent? an-ftree) 0]
+              [else (+ (- year (child-date an-ftree))
+                       (sum-ages (child-father an-ftree))
+                       (sum-ages (child-mother an-ftree)))]))
+
+          (define (count-persons an-ftree)
+            (cond
+              [(no-parent? an-ftree) 0]
+              [else (+ 1
+                       (count-persons (child-father an-ftree))
+                       (count-persons (child-mother an-ftree)))])))
+
+    (/
+     (for/sum ([ft a-forest]) (sum-ages ft))
+     (for/sum ([ft a-forest]) (count-persons ft)))))
 
