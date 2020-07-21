@@ -25,10 +25,10 @@
 (define Dir-Libs (cons Dir-Code (cons Dir-Docs '())))
 
 
-(define Dir-TS (cons "read!" (cons Dir-Text (cons Dir-Libs '()))))
+(define Dir-TS (cons Dir-Text (cons "read!" (cons Dir-Libs '()))))
 
-(check-expect Dir-TS '("read!"
-                        ("part1" "part2" "part3")
-                        (("hang" "draw")
-                         ("read!"))))
+(check-expect Dir-TS '(("part1" "part2" "part3")
+                       "read!"
+                       (("hang" "draw")
+                        ("read!"))))
 
