@@ -69,7 +69,7 @@
 (check-expect (how-many Dir-Text) 3)
 (check-expect (how-many Dir-Libs) 3)
 (check-expect (how-many Dir-TS) 7)
-(define (how-many-structural d)
+(define (how-many d)
   (local (;; File* -> Number
           (define (how-many-in-files lof)
             (length lof))
