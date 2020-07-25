@@ -7,16 +7,11 @@
 ;; so that they abstract over the kinds of Atoms that may appear.
 
 
-;; An Atom is one of:
-;; – Number
-;; – String
-;; – Symbol
+;; An X is any atomic data type.
 
-;; An SL is one of:
-;; - [List-of Atom]
-;; - [List-of SL]
+;; An SL is a [List-of S-expr]
 
 ;; An S-expr is one of:
-;; – Atom
+;; – X
 ;; – SL
 
