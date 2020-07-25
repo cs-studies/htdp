@@ -12,23 +12,23 @@
 
 (define-struct con [left right])
 ;; A Con is a structure:
-;;    (make-con BSL-bool-repr BSL-bool-repr)
-;; (make-con r1 r2) represents a BSL expression
-;; for evaluating of the conjunction of r1 and r2.
+;;    (make-con BSL-bool-expr BSL-bool-expr)
+;; (make-con b1 b2) represents a BSL expression
+;; for evaluating of the conjunction of b1 and b2.
 
 (define-struct dis [left right])
 ;; A Dis is a structure:
-;;    (make-dis BSL-bool-repr BSL-bool-repr)
-;; (make-dis r1 r2) represents a BSL expression
-;; for evaluating of the disjunction of r1 and r2.
+;;    (make-dis BSL-bool-expr BSL-bool-expr)
+;; (make-dis b1 b2) represents a BSL expression
+;; for evaluating of the disjunction of b1 and b2.
 
 (define-struct neg [val])
 ;; A Neg is a structure:
-;;    (make-neg BSL-bool-repr)
+;;    (make-neg BSL-bool-expr)
 ;; (make-neg r) represents a BSL expression
 ;; for evaluating of the negation of r.
 
-;; BSL-bool-repr is one of:
+;; BSL-bool-expr is one of:
 ;; - Boolean
 ;; - Con
 ;; - Dis
@@ -37,23 +37,23 @@
 ;; A BSL-value is a Boolean.
 
 
-;; BSL-bool-repr -> BSL-value
-;; Computes value of the given BSL-bool-repr.
+;; BSL-bool-expr -> BSL-value
+;; Computes value of the given BSL-bool-expr.
 (check-expect (eval-bool-expression #true) #true)
 (check-expect (eval-bool-expression #false) #false)
 (check-expect (eval-bool-expression (make-con #true #false)) #false)
 (check-expect (eval-bool-expression (make-con #true (make-dis #false #true))) #true)
 (check-expect (eval-bool-expression
                (make-dis (make-neg #true) (make-con #false (make-neg #false)))) #false)
-(define (eval-bool-expression repr)
+(define (eval-bool-expression expr)
   (cond
-    [(boolean? repr) repr]
-    [(neg? repr)
-     (not (eval-bool-expression (neg-val repr)))]
-    [(con? repr)
-     (and (eval-bool-expression (con-left repr))
-          (eval-bool-expression (con-right repr)))]
-    [(dis? repr)
-     (or (eval-bool-expression (dis-left repr))
-         (eval-bool-expression (dis-right repr)))]))
+    [(boolean? expr) expr]
+    [(neg? expr)
+     (not (eval-bool-expression (neg-val expr)))]
+    [(con? expr)
+     (and (eval-bool-expression (con-left expr))
+          (eval-bool-expression (con-right expr)))]
+    [(dis? expr)
+     (or (eval-bool-expression (dis-left expr))
+         (eval-bool-expression (dis-right expr)))]))
 

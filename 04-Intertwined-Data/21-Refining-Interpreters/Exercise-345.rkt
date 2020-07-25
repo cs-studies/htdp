@@ -11,17 +11,17 @@
 
 (define-struct add [left right])
 ;; An Add is a structure:
-;;    (make-add BSL-repr BSL-repr)
-;; (make-add repr1 repr2) represents
-;; a BSL expression for addition of repr1 and repr2.
+;;    (make-add BSL-expr BSL-expr)
+;; (make-add expr1 expr2) represents
+;; a BSL expression for addition of expr1 and expr2.
 
 (define-struct mul [left right])
 ;; A Mul is a structure:
-;;    (make-mul BSL-repr BSL-repr)
-;; (make-mul repr1 repr2) represents
-;; a BSL expression for multiplication of repr1 and repr2.
+;;    (make-mul BSL-expr BSL-expr)
+;; (make-mul expr1 expr2) represents
+;; a BSL expression for multiplication of expr1 and expr2.
 
-;; A BSL-repr is one of:
+;; A BSL-expr is one of:
 ;; - Number
 ;; - Add
 ;; - Mul
