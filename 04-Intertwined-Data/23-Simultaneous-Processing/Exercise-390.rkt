@@ -32,7 +32,6 @@
               (make-branch 'b 'c))
 (check-expect (tree-pick (make-branch 'a (make-branch 'b 'c)) '(left)) 'a)
 (check-expect (tree-pick (make-branch 'a (make-branch 'b 'c)) '(right left)) 'b)
-#|
 (define (tree-pick tree lod)
   (cond
     [(and (symbol? tree) (empty? lod)) tree]
@@ -44,14 +43,4 @@
           (branch-left tree)
           (branch-right tree))
       (rest lod))]))
-|#
-(define (tree-pick tree lod)
-  (cond
-    [(empty? lod) tree]
-    [(symbol? tree) (error "path too long")]
-    [else (tree-pick
-           (if (symbol=? 'left (first lod))
-               (branch-left tree)
-               (branch-right tree))
-           (rest lod))]))
 
