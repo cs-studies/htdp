@@ -186,12 +186,10 @@
   (if (or (> n (inex->number MAX-POSITIVE))
           (< n (inex->number MIN-POSITIVE)))
       (error ERR-RANGE)
-      (if (integer? n)
-          (convert n 1 0)
-          (cond
-            [(> (round n) 9) (convert (round n) 1 0)]
-            [(< n 1) (convert n -1 0)]
-            [else (convert (round (* 10 n)) -1 1)]))))
+      (cond
+        [(or (integer? n) (> (round n) 9)) (convert (round n) 1 0)]
+        [(< n 1) (convert n -1 0)]
+        [else (convert (round (* 10 n)) -1 1)])))
 
 ;; Number S N -> Inex
 ;; Converts the given inex fields values
