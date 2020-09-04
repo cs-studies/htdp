@@ -55,6 +55,8 @@
 ;;; And, if so, do we need anything from the original problem data?
 ;;
 ;; Yes, the new problem is solved the same way as the original one.
+;; The current step problem solution and the new problem solution
+;; are combined.
 
 
 ;; [List-of Number] -> [List-of Number]
