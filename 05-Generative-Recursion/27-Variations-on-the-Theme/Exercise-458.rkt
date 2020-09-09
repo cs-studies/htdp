@@ -14,7 +14,7 @@
 ;; Assumes that (< a b) holds.
 (check-within (integrate-kepler (lambda (x) 20) 12 22) 200 EPS)
 (check-within (integrate-kepler (lambda (x) (* 2 x)) 0 10) 100 EPS)
-;(check-within (integrate-kepler (lambda (x) (* 3 (sqr x))) 0 10) 1000 EPS)
+(check-within (integrate-kepler (lambda (x) (* 3 (sqr x))) 0 10) 1000 EPS)
 (define (integrate-kepler f a b)
   (local ((define mid (/ (+ a b) 2))
           (define (trapezoid-area l r)
