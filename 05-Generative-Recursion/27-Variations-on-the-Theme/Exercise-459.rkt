@@ -15,16 +15,16 @@
 ;; [Number -> Number] Number Number -> Number
 ;; Computes the area under the graph of f between a and b.
 ;; Assumes that (< a b) holds.
-(check-within (integrate (lambda (x) 20) 12 22) 200 EPS)
-(check-within (integrate (lambda (x) (* 2 x)) 0 10) 100 EPS)
-(check-within (integrate (lambda (x) (* 3 (sqr x))) 0 10) 1000 EPS)
-(define (integrate f a b)
+(check-within (integrate-rectangles (lambda (x) 20) 12 22) 200 EPS) ; 200
+(check-within (integrate-rectangles (lambda (x) (* 2 x)) 0 10) 100 EPS) ; 100
+(check-within (integrate-rectangles (lambda (x) (* 3 (sqr x))) 0 10) 1000 EPS) ; 999.9901...
+(define (integrate-rectangles f a b)
   (local ((define width (/ (- b a) R))
           (define mid (+ a (/ width 2)))
-          (define (integrate* i)
+          (define (integrate-rectangle i)
             (cond
               [(= i R) 0]
               [else (+ (* width (f (+ mid (* i width))))
-                       (integrate* (add1 i)))])))
-    (integrate* 0)))
+                       (integrate-rectangle (add1 i)))])))
+    (integrate-rectangle 0)))
 
