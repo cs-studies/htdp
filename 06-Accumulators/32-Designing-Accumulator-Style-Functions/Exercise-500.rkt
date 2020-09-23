@@ -13,7 +13,11 @@
 (check-expect (how-many '(10)) 1)
 (check-expect (how-many '(10 20 30)) 3)
 (define (how-many l0)
-  (local ((define (how-many/acc l a)
+  (local (;; [List-of X] Number -> Number
+          ;; Calculates the number of items on l.
+          ;; Accumulator a is a number of items on l0
+          ;; that are not on l.
+          (define (how-many/acc l a)
             (cond
               [(empty? l) a]
               [else (how-many/acc (rest l) (add1 a))])))
