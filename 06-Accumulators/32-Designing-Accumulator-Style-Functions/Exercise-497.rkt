@@ -51,3 +51,7 @@
 
 ;(time (evaluate !.v2 20 1000)) ; 0
 
+
+;;; See also
+;; https://stackoverflow.com/questions/4733456/performance-of-recursion-vs-accumulator-style
+
