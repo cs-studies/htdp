@@ -6,7 +6,8 @@
 ;; Consider the revised data representation for FSMs.
 ;; Represent the FSM from exercise 109 in this context.
 ;; Design the function fsm-simulate.
-;; If the sequence of keystrokes forces the revised FSM to reach a final state, fsm-simulate stops.
+;; If the sequence of keystrokes forces the revised FSM to reach a final state,
+;; fsm-simulate stops.
 
 
 (require 2htdp/universe)
@@ -15,7 +16,7 @@
 
 ;;; Data Definitions
 
-;; FSM-State is a Color.
+;; FSM-State is a String that specifies a color.
 
 (define-struct transition [current key next])
 ;; A Transition is a structure:
@@ -85,7 +86,7 @@
   (cond
     [(empty? transitions) current]
     [else (if (and
-               (string=? (transition-current (first transitions)) current)
+               (state=? (transition-current (first transitions)) current)
                (key=? (transition-key (first transitions)) ke))
               (transition-next (first transitions))
               (find (rest transitions) current ke))]))
@@ -96,13 +97,20 @@
 (check-expect (end? (make-fsm "yellow" transitions "green")) #false)
 (check-expect (end? (make-fsm "green" transitions "green")) #true)
 (define (end? an-fsm)
-  (string=? (fsm-initial an-fsm) (fsm-final an-fsm)))
+  (state=? (fsm-initial an-fsm) (fsm-final an-fsm)))
 
 ;; FSM -> Image
 ;; Produces the last scene.
 (check-expect (render-final-state fsm-109) (render-state fsm-109))
 (define (render-final-state an-fsm)
   (render-state an-fsm))
+
+;; FSM-State FSM-State -> Boolean
+;; Verifies equality of two FSM-States.
+(check-expect (state=? "red" "green") #false)
+(check-expect (state=? "red" "red") #true)
+(define (state=? s1 s2)
+  (string=? s1 s2))
 
 
 ;;; Application

@@ -3,9 +3,11 @@
 #reader(lib "htdp-beginner-abbr-reader.ss" "lang")((modname Exercise-229) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 ;;
 ;; Exercise 229.
-;; Represent the FSM from exercise 109 using lists of revised data definition for Transition;
+;; Represent the FSM from exercise 109
+;; using lists of revised data definition for Transition;
 ;; ignore errors and final states.
-;; Modify the design of simulate so that it deals with keystrokes in the appropriate manner now.
+;; Modify the design of simulate so that it deals with keystrokes
+;; in the appropriate manner now.
 
 
 (require 2htdp/universe)
@@ -14,7 +16,7 @@
 
 ;;; Data Definitions
 
-;; FSM-State is a Color.
+;; FSM-State is a String that specifies a color.
 
 (define-struct transition [current key next])
 ;; A Transition is a structure:
@@ -85,10 +87,17 @@
   (cond
     [(empty? transitions) current]
     [else (if (and
-               (string=? (transition-current (first transitions)) current)
+               (state=? (transition-current (first transitions)) current)
                (key=? (transition-key (first transitions)) ke))
               (transition-next (first transitions))
               (find (rest transitions) current ke))]))
+
+;; FSM-State FSM-State -> Boolean
+;; Verifies equality of two FSM-States.
+(check-expect (state=? "red" "green") #false)
+(check-expect (state=? "red" "red") #true)
+(define (state=? s1 s2)
+  (string=? s1 s2))
 
 
 ;;; Application

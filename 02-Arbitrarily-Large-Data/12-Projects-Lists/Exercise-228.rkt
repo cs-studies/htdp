@@ -13,7 +13,7 @@
 
 ;;; Data Definitions
 
-;; FSM-State is a Color.
+;; FSM-State is a String that specifies a color.
 
 (define-struct transition [current next])
 ;; A Transition is a structure:
@@ -87,9 +87,16 @@
 (define (find transitions current)
   (cond
     [(empty? transitions) (error (string-append "not found: " current))]
-    [else (if (string=? (transition-current (first transitions)) current)
+    [else (if (state=? (transition-current (first transitions)) current)
               (transition-next (first transitions))
               (find (rest transitions) current))]))
+
+;; FSM-State FSM-State -> Boolean
+;; Verifies equality of two FSM-States.
+(check-expect (state=? "red" "green") #false)
+(check-expect (state=? "red" "red") #true)
+(define (state=? s1 s2)
+  (string=? s1 s2))
 
 
 ;;; Application

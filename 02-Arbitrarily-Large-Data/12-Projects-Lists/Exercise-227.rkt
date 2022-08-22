@@ -8,7 +8,7 @@
 ;; Formulate a data representation for the BW Machine.
 
 
-;; FSM-State is a Color.
+;; FSM-State is a String that specifies a color.
 
 (define-struct transition [current next])
 ;; A Transition is a structure:

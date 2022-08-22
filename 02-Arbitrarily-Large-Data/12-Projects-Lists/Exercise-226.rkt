@@ -6,30 +6,13 @@
 ;; Design state=?, an equality predicate for states.
 
 
-(require 2htdp/image)
+;; FSM-State is a String that specifies a color.
 
 
-;; FSM-State is a Color.
-
-(define-struct transition [current next])
-;; A Transition is a structure:
-;;    (make-transition FSM-State FSM-State)
-
-;; An FSM is one of:
-;; - '()
-;; - (cons Transition FSM)
-;; Represents the transitions that a finite state machine
-;; can take from one state to another in reaction to keystrokes.
-
-
-;; Any -> Boolean
-;; Determines whether the given value is an FSM-State.
-(check-expect (state=? #true) #false)
-(check-expect (state=? 42) #false)
-(check-expect (state=? "") #false)
-(check-expect (state=? "a") #false)
-(check-expect (state=? "red") #true)
-(check-expect (state=? "green") #true)
-(define (state=? any)
-  (and (string? any) (image-color? any)))
+;; FSM-State FSM-State -> Boolean
+;; Verifies equality of two FSM-States.
+(check-expect (state=? "red" "green") #false)
+(check-expect (state=? "red" "red") #true)
+(define (state=? s1 s2)
+  (string=? s1 s2))
 
