@@ -30,12 +30,12 @@ With that in mind, **have happy coding**!
 
 1. Data Definitions
 2. Functions headers
-  - With data types (signature)
-  - Optionally: a purpose
-    - Or write self-documenting code
-  - Stub
+   - With data types (signature)
+   - Optionally: a purpose
+     - Or write self-documenting code
+   - Stub
 3. Unit Tests
 4. Templates
 5. Implementation
 6. Run tests
-  - Overview the code
+   - Overview the code
