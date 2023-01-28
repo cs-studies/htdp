@@ -26,3 +26,16 @@ With that in mind, **have happy coding**!
 - [DrRacket IDE Shortcuts.](https://docs.racket-lang.org/drracket/Keyboard_Shortcuts.html)
 - [Teach Yourself Computer Science](https://teachyourselfcs.com) lists essentials (distilled curriculum) for CS self-study.
 
+### Cheat-Sheet: Program Design Cycle
+
+1. Data Definitions
+2. Functions headers
+  - With data types (signature)
+  - Optionally: a purpose
+    - Or write self-documenting code
+  - Stub
+3. Unit Tests
+4. Templates
+5. Implementation
+6. Run tests
+  - Overview the code
