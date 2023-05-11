@@ -38,4 +38,4 @@ With that in mind, **have happy coding**!
 4. Templates
 5. Implementation
 6. Run tests
-   - Overview the code
+   - Review the code
