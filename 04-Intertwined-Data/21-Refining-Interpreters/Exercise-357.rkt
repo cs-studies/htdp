@@ -64,7 +64,7 @@
            (eval-definition1 plugd f x b)))]))
 
 
-;; BSL-fun-expr Symbol Number -> BSL-fun-expr
+;; BSL-fun-expr Symbol BSL-fun-expr -> BSL-fun-expr
 ;; Produces a BSL-fun-expr like ex
 ;; with the occurrences of x replaced by v.
 (check-expect (subst 100 'x 3) 100)
